@@ -5,24 +5,32 @@ namespace ConsoleApp1
     class Program
     {
         private String Texto;
-        private int periodo;
+        private int canti_palabras;
         private String temporal;
-        int inicio, fin,repeticiones;
+        int inicio, fin,letras,fin_temp;
         public String tx="";
             public void validar() {
                 Console.Write("Ingrese la cadena de texto: ");
                 Texto = Console.ReadLine();
+            canti_palabras = 3;
                  inicio = Texto.IndexOf(Texto);
+           
                  fin = Texto.Length;
-            periodo = 3;
-            repeticiones = fin / periodo;
-            fin = fin - repeticiones+1;
-                temporal = Texto.Remove(inicio,fin);
+            letras = fin / canti_palabras;
+            fin_temp = fin- letras;
+            temporal = Texto.Remove(inicio, fin_temp);
+
+
+
+
 
         }
 
              public void imprimir() {
-                Console.WriteLine("Salida: " + temporal.Length);
+            Console.WriteLine(" la plabra completa es :" + Texto);
+           
+
+             Console.WriteLine("Salida: " + temporal.Length);
                 
              }
 
